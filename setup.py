@@ -420,7 +420,7 @@ def prepare_extensions(use_cython=True):
         print("building without Cython")
 
     if cythonize is not None:
-        ext_modules = cythonize(ext_modules)
+        ext_modules = cythonize(ext_modules, gdb_debug=True)
 
     return ext_modules, ext_libraries
 
